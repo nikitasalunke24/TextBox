@@ -1,0 +1,31 @@
+*{
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading{
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(218, 11, 11);
+    text-shadow: 5px 7px 0.5px #adbf6d;
+}
+
+form button{
+    background-color: rgb(75, 177, 180);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+form button:hover{
+    background-color: white;
+    border-color: rgb(75, 177, 180);
+    border-width: 2px;
+    border-style: solid;
+    color: rgb(75, 177, 180);
+    transition-duration: 1s;
+}

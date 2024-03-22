@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="textbox.css">
+    <title>TextBox</title>
+</head>
+
+    <div class=""></div>
+    <body>
+    <h1 class="heading" align="center">TEXT BOX</h1>
+    <div class="container" align="center">
+        <form class="textbox">
+            <label>Enter the text below : </label>
+            <br><br>
+            <textarea cols="60" rows="15"  id="text" onkeyup="updateInfo()" autofocus></textarea>
+            <br><br>
+             <button type="button" onclick="transformToUpperCase()">UPPERCASE</button>
+             <button type="button" onclick="transformToLowerCase()">LOWERCASE</button>
+             <button type="button" onclick="textColor()">TEXT COLOR</button>
+             <button type="button" onclick="find()">FIND</button>
+             <button type="button" onclick="addEmojis()">EMOJIS:)</button>
+
+            <br><br>
+            <h2 id="textinfo">Above textbox contains 0 words and 0 characters</h2>
+        </form>
+    </div>
+    <script>
+        let text =document.getElementById("text");
+        let textInfo = document.getElementById('textinfo');
+        let clr;
+
+        function transformToUpperCase(){
+            text.value = text.value.toUpperCase();
+        }
+
+        function transformToLowerCase(){
+            text.value = text.value.toLowerCase();
+        }
+
+        function textColor(){
+            clr = prompt(("Enter color : ").toLowerCase());
+            text.style.color=clr;
+        }
+
+        function find(){
+            let searchElement = prompt("Enter word u have to search : ");
+            if(searchelement=text.value){
+                alert("${searchElement} is found");
+            }
+            else{
+                alert("${searchElement} is not found");
+            }
+        }
+
+        function addEmojis(){
+            let em = prompt("Enter the hex value : ");
+            console.log(em);
+        }
+
+        function updateInfo(){
+            let numberOfWords = text.value.trim().split(" ").length;
+            textInfo.innerHTML = `Above textbox contains ${numberOfWords} words and ${text.value.length} characters.`
+        }
+
+    </script>
+</body>
+</html>
